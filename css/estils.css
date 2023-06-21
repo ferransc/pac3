@@ -1,0 +1,566 @@
+/*****
+        CSS PRIMARIS PER A TOTS ELS ARXIUS
+*****/
+:root {
+    --primary-color: rgb(0,0,0);
+    --secondary-color: rgb(0,0,0,0.5);
+    --contrast-color: rgb(222,35,51);
+    --text-light: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: var(--primary-color);
+    line-height: 1.5;
+    overflow: auto;
+}
+/*****
+    HEADER, FOOTER I MENÚ PRINCIPAL - MOBILE FIRST -
+*****/
+header {
+    text-align: center;
+    width: 100%;
+}
+header a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+header a:hover {
+    color: var(--secondary-color);
+}
+.logo1 {
+    font-size: 4vw;
+    font-weight: 400;
+    letter-spacing: -0.5vw;
+}
+.logo1 #logo2 {
+    font-weight: 700;
+    letter-spacing: 0;
+}
+.sticky {    
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: rgb(255,255,255);
+  width: 100%;
+  box-shadow: 0 0 10px 0 rgb(244, 246, 247);
+  font-size: 1vw;
+  z-index: 1000;
+  
+}
+.sticky a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.sticky a:hover {
+    color: var(--secondary-color);
+}
+.cap {
+    display: block;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.cap li {
+    padding: 1vw;
+    margin: 0.8vw 1vw;
+}
+.cap li:last-child {
+    margin-bottom: 1.5vw;
+}
+.sticky .active {
+    color: var(--contrast-color);
+}
+.active {
+    color: var(--contrast-color);
+}
+footer {
+    width: 100%;
+    height: 50%;
+    background-color: var(--primary-color);
+    color: rgb(255,255,255);
+    padding: 2% 0;    
+    text-align: center;
+}
+.peu {
+    display: block;
+    list-style: none;
+    
+}
+.peu li:last-child {
+    margin-bottom: 1vw;
+}
+.peu a {
+    text-decoration: none;
+    color: rgb(255,255,255);
+}
+.peu a:hover {
+    color: var(--contrast-color);
+}
+.social {
+    display: flex;
+    padding-left: 47%;
+    margin-bottom: 2vw;
+}
+.social a:hover {
+    opacity: 0.7;
+}
+/*****
+    HEADER I MENÚ PRINCIPAL - MEDIA QUERIES
+*****/
+@media (min-width: 992px) { 
+    header {
+        width: 100%;
+    }
+    header p {
+        text-align: left;
+        font-size: 3vw;
+        font-weight: 400;
+        letter-spacing: -0.3vw;
+        padding: 1% 17%;
+    }
+    .cap {
+        display: flex;
+        list-style: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 0 16%;
+    }
+    .cap li {
+        margin: 0 0.8vw;
+    }
+    .cap li:first-child {
+        margin-left: 0;
+    }
+    footer {
+        padding: 2% 15%;    
+        text-align: left;
+    }
+    .peu {
+        display: flex;
+    }
+    .peu li {
+        margin: 0 0.8vw;
+    }
+    .peu li:first-child {
+        margin-bottom: 0;
+    }
+    .social {
+        display: flex;
+        padding-left: 1%;
+        list-style: none;
+    }
+    footer p {
+        padding-left: 1%;
+    }
+}
+/*****
+    INDEX - MEDIA QUERIES
+*****/
+/*****
+    INDEX - MOBILE FIRST
+*****/
+.main {
+    background-image: url('img/bg-hero-home-m.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.main h1{
+    color: rgb(255,255,255);
+    text-align: center;
+    padding: 5% 23% 5% 23%;    
+    font-size: 3.5vw;
+    font-weight: 400;
+    line-height: 1.1;
+}
+.item {
+    margin: 2% 6%;
+}
+.title {
+  font-size: 2vw;  
+  margin: 2% 5%;
+  font-weight: 700;
+  text-align: center;
+}
+.text {
+ font-size: 1.2vw;  
+  margin: 1% 0;
+}
+.grid1 {
+  display: block;
+  grid-gap: 2%;
+  overflow: hidden;
+    }
+.grid-title {
+    color: var(--contrast-color);
+    font-size: 1.5vw;
+    margin: 2% 0;
+}
+.grid1 .grid-text {
+    margin: 0;
+    font-size: 1vw;
+    padding: 0;  
+}
+.grid1 .symbol {
+    margin: 6% 0;
+    padding: 0;
+}
+.symbol:before {
+    content: ">\00a0\00a0\00a0\00a0";
+    color: var(--contrast-color);
+    font-size: 0.8vw;
+}
+.symbol a {
+    text-transform: uppercase;
+    color: var(--contrast-color);
+    font-size: 0.8vw;
+    font-weight: 700;
+    text-decoration: none;
+}
+.symbol a:hover {
+    color: var(--primary-color);
+}
+/*****
+    INDEX - MEDIA QUERIES
+*****/
+@media (min-width: 992px) { 
+    .main {
+        background-image: url('img/bg-hero-home.jpg');
+    }
+}
+@media (min-width: 768px) { 
+    .item .text {
+        margin: 1% 26%;  
+    }
+    .grid1 {
+        margin: 1% 10%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2%;
+        overflow: hidden;
+    }
+}
+/*****
+    APLICACIONS - MOBILE FIRST
+*****/
+.grid2 div {
+    margin: 2% 0;
+    background-color: rgb(244, 246, 247);
+    overflow: hidden;
+    text-align: left;
+    display: block;
+}
+.grid2 .grid-title {
+    padding: 1% 2%;
+    font-size: 1.5vw;
+    color: var(--primary-color);
+    font-weight: 700;
+    
+}
+.grid2 .grid-text {
+    text-align: left;
+    padding: 0 2%;
+}
+.grid2 .symbol {
+    margin: 6% 0;
+    padding: 1% 2% 0 2%;
+}
+/*****
+    APLICACIONS - MEDIA QUERIES
+*****/
+@media (min-width: 768px) { 
+    .grid2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2%;
+        overflow: hidden;
+    }
+}
+@media (min-width: 992px) { 
+     .grid2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5%;
+        overflow: hidden;
+        margin: 1% 12%;
+        width: 65vw;
+        height: 65vw;
+    }
+    .grid2 .grid-title {
+        padding: 5%;
+    }
+    .grid2 .grid-text {
+        text-align: left;
+        margin: 0;
+        padding: 5%;
+        font-size: 1vw;
+    }
+}
+/**********
+        IMATGE & VIDEO
+**********/
+.img-fluida {
+    width: 100%;
+    height: auto;
+}
+.video-fluid {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+.video-fluid-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.video-fluid::before {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+}
+/*****
+    AL CINEMA - MOBILE FIRST
+*****/
+.grid3 .cell {
+    background-color: rgb(244,246,247);
+    margin: 2% 12%;
+}
+.grid3 figcaption{
+    padding: 2% 0;
+}
+.italic-bold {
+    font-weight: bold;
+    font-style: italic;
+}
+/*****
+    AL CINEMA - MEDIA QUERIES
+*****/
+@media (min-width: 992px) { 
+ .grid3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5%;
+        overflow: hidden;
+        margin: 1% 17%;
+    }
+    .grid3 .cell {
+        margin: 0;
+        background-color: rgb(244, 246, 247);
+        overflow: hidden;
+    }
+}
+/*****
+    DESPACHO 42 - MOBILE FIRST
+*****/
+.menu42 {
+    display: flex;
+    margin: 2% 17%;
+    font-size: 1vw;
+    list-style: none;
+}
+.menu42 li:first-child  {
+    padding: 0;
+}
+.menu42 li:first-child:after  {
+    padding: 0;
+    content: "\00a0\00a0\00a0>\00a0\00a0";
+}
+.menu42 li:nth-of-type(2):after  {
+    content: "\00a0\00a0\00a0>\00a0\00a0";
+}
+.menu42 a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.item2 {
+    margin: 2% 4%;
+}
+.title2 {
+  font-size: 1.5vw;  
+  margin: 1% 0;
+  font-weight: 700;
+  text-align: left;
+}
+.img42 {
+  margin: 2% 4%;
+}
+.text-link {
+ font-size: 1.2vw;  
+ color: var(--contrast-color);
+ text-decoration: none;
+ font-style: italic;
+ font-weight: 700;
+}
+.text-link:hover {
+ color: var(--primary-color);
+ font-style: italic;
+ text-decoration: underline;
+ font-weight: 400;
+}
+.grid4 div {
+    margin: 2% 4%;
+    background-color: rgb(244, 246, 247);
+    overflow: hidden;
+    text-align: left;
+    display: block;
+}
+.grid4 .grid-title {
+    padding: 1% 2%;
+    font-size: 1.5vw;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.grid4 .grid-text {
+    text-align: left;
+    padding: 0 2%;
+}
+.grid4 .grid-title2 {
+    text-align: left;
+    padding: 0 1%;
+    font-size: 1.5vw;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.grid4 .grid-text2 {
+    text-align: left;
+    padding: 0 1%;
+}
+.banner {
+    font-size: 1.6vw;
+    font-weight: 700;
+    padding: 1% 2%;
+    text-align: left;
+}
+.banner::before {
+    background-image: url(../img/isologo-despacho42.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 2%;
+    padding: 2%;
+    border-radius: 1vw;
+    display: flex;
+    width: 3vw; 
+    height: 3vw;
+    content:"";
+}
+.ad42 {
+    padding-top: 0;
+    font-size: 1vw;
+    list-style: none;
+}
+.ad42 a {
+    color: var(--contrast-color);
+    text-decoration: none;
+}
+.ad42 a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.grid4 .form {
+    background-color: rgb(255,255,255);
+}
+fieldset {
+    border-style: none;
+    overflow: hidden;
+    padding-top: 1%;
+}
+.required {
+    font-size: 1vw;
+    margin: 2% 0;
+    display: inline-block;
+}
+input, textarea {
+    border: 1px solid #000;
+	font-size: 1.1vw;
+    width: 100%;
+    border-style: none;
+    background-color: rgb(244, 246, 247);
+    margin: 0 1%;
+}
+input {
+	height: 2vw;
+}
+textarea {
+    height: 6vw;
+}
+input[type="checkbox"] {
+    margin: 1vw 0 1vw 1vw;
+	width: 1vw;
+}
+input[type="radio"]+label, input[type="checkbox"]+label {
+    display: inline-block;
+}
+input:focus, textarea:focus {
+    border-style: none;
+    background-color: rgb(244, 246, 247);
+    outline: none;
+}
+button {
+    display: inline-block;
+    width: auto;
+    margin: 2% 1%;
+    padding: 1% 3%;
+    background-color: var(--contrast-color);
+    color: rgb(255, 255, 255);
+    font-size: 1.1vw;
+    border: none;
+    text-transform: uppercase;
+    appearance: none; 
+}
+button:hover {
+    cursor: pointer;
+}
+.more1,.more2 {
+    font-size: 1.2vw;
+    padding: 1% 2%;
+    text-align: left;
+    display: flex;
+    border-bottom: 1px dotted; 
+}
+.more1::before {
+    background-image: url(../img/n-geoffrey-hinton-thumbnail.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 1%;
+    padding: 2%;
+    border-radius: 10vw;
+    display: flex;
+    width: 3vw; 
+    height: 3vw;
+    content:"";
+}
+.more2::before {
+    background-image: url(../img/n-ue-ia-thumbnail.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 1%;
+    padding: 2%;
+    border-radius: 10vw;
+    display: flex;
+    width: 3vw; 
+    height: 3vw;
+    content:"";
+}
+.more {
+    display: block;
+    margin: 1% 3%;
+}
+.text-more {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.data {
+    font-weight: 400;
+}
